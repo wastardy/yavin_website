@@ -105,4 +105,13 @@
     .header .img-container {
         margin-top: 25px;
     }
+
+    .services .col-md-4 {
+        border-bottom: 1px #ccc solid;
+        margin: 10px 0px 30px;
+    }
+
+    .services .col-md-4:last-child {
+        margin: 10px 0px 0px;
+    }
 }
