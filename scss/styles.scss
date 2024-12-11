@@ -50,6 +50,11 @@
 //     width: 500px;
 // }
 
+.contact .decoration-star {
+    left: -300px;
+    width: 600px;
+}
+
 @media (max-width: 992px) {
     .xl-text {
         font-size: 50px;
@@ -95,6 +100,11 @@
 
     .details-2 .decoration-star {
         top: 300px;
+    }
+
+    .contact .decoration-star {
+        left: -150px;
+        width: 360px;
     }
 }
 
