@@ -1,17 +1,18 @@
 const userScroll = () => {
     const navbar = document.querySelector('.navbar');
+    const toTopButton = document.querySelector('.to-top-btn');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 55) {
             navbar.classList.add('navbar-background');
+            toTopButton.classList.add('show');
         }
         else {
             navbar.classList.remove('navbar-background')
+            toTopButton.classList.remove('show');
         }
     });
 }
-
-document.addEventListener('DOMContentLoaded', userScroll);
 
 const incrementStats = () => {
     const counters = document.querySelectorAll('.counter');
@@ -40,8 +41,6 @@ const incrementStats = () => {
     });
 }
 
-document.addEventListener('DOMContentLoaded', incrementStats);
-
 document.addEventListener('click', (event) => {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('#nav-dropdown');
@@ -54,3 +53,13 @@ document.addEventListener('click', (event) => {
         navbarToggler.click();
     }
 });
+
+const scrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', userScroll);
+document.addEventListener('DOMContentLoaded', incrementStats);
+document.querySelector('#to-top').addEventListener('click', scrollToTop)
